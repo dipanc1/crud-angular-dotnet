@@ -1,0 +1,55 @@
+<div class="container">
+  <h1>Edit Employee</h1>
+
+  <form class="example-form" #form="ngForm" (ngSubmit)="updateEmployee()">
+    <p>
+      <mat-form-field class="example-full-width"appearance="outline">
+        <mat-label>ID</mat-label>
+        <input type="text" name="id" id="id" matInput readonly placeholder="abc" [(ngModel)]="employeeDetails.id">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="example-full-width"appearance="outline">
+        <mat-label>Enter your Name</mat-label>
+        <input type="text" name="name" id="name" matInput placeholder="abc" [(ngModel)]="employeeDetails.name">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="example-full-width"appearance="outline">
+        <mat-label>Enter your Email</mat-label>
+        <input [(ngModel)]="employeeDetails.email" name="email" type="email" id="email" matInput placeholder="abc@ghi.com">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="example-full-width"appearance="outline">
+        <mat-label>Enter your Phone Number</mat-label>
+        <input [(ngModel)]="employeeDetails.phone" name="phone" type="tel" id="phone" matInput placeholder="999999999">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="example-full-width"appearance="outline">
+        <mat-label>Enter your Salary</mat-label>
+        <input [(ngModel)]="employeeDetails.salary" name="salary" type="number" id="salary" matInput placeholder="100000000">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="example-full-width"appearance="outline">
+        <mat-label>Enter your Department</mat-label>
+        <input [(ngModel)]="employeeDetails.department" name="department" type="text" id="department" matInput placeholder="dancing">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+    </p>
+    <div class="buttons">
+
+      <button mat-raised-button color="primary">Update</button>
+
+      <button mat-raised-button color="danger" (click)="deleteEmployee()">Delete</button>
+    </div>
+  </form>
+
+</div>

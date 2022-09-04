@@ -1,0 +1,43 @@
+<div class="container">
+  <h1>Add Employee</h1>
+  <form #form="ngForm" class="example-form" (ngSubmit)="addEmployee()">
+    <p>
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Enter your Name</mat-label>
+        <input type="text" name="name" id="name" matInput placeholder="abc" [(ngModel)]="addEmployeeRequest.name">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Enter your Email</mat-label>
+        <input [(ngModel)]="addEmployeeRequest.email" name="email" type="email" id="email" matInput placeholder="abc@ghi.com">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Enter your Phone Number</mat-label>
+        <input [(ngModel)]="addEmployeeRequest.phone" name="phone" type="tel" id="phone" matInput placeholder="999999999">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Enter your Salary</mat-label>
+        <input [(ngModel)]="addEmployeeRequest.salary" name="salary" type="number" id="salary" matInput placeholder="100000000">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Enter your Department</mat-label>
+        <input [(ngModel)]="addEmployeeRequest.department" name="department" type="text" id="department" matInput placeholder="dancing">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+    </p>
+
+    <button mat-raised-button color="primary">Save</button>
+  </form>
+
+</div>
